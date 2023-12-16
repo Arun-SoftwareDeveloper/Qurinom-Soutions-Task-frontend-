@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import "../FormStyles/ResetPasswordForm.css";
+import backendApi from "../BackendAPi";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
@@ -55,7 +56,7 @@ const ResetPassword = () => {
 
     try {
       // Make API request to reset password
-      const response = await axios.post(`http://localhost:4000/resetPassword`, {
+      const response = await axios.post(`${backendApi}/resetPassword`, {
         resetToken: resetToken, // Include the reset token
         password,
       });

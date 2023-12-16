@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../FormStyles/ForgotPasswordForm.css";
+import backendApi from "../BackendAPi";
 
 function ForgotPasswordForm() {
   const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ function ForgotPasswordForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/forgotPassword",
+        `${backendApi}/forgotPassword`,
         formData
       );
 

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../FormStyles/LoginForm.css";
+import backendApi from "../BackendAPi";
 
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const LoginForm = ({ onLogin }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/login", {
+      const response = await axios.post(`${backendApi}/login`, {
         email,
         password,
       });

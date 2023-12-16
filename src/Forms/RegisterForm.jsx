@@ -4,8 +4,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../FormStyles/RegisterForm.css";
-
-// ... (imports)
+import backendApi from "../BackendAPi";
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
@@ -71,10 +70,7 @@ function RegisterForm() {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:4000/register",
-        formData
-      );
+      const response = await axios.post(`${backendApi}/register`, formData);
 
       if (response.status === 400) {
         toast.error("Incorrect or missing password");
