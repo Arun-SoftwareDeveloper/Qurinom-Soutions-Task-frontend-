@@ -18,7 +18,13 @@ const CreateCardPopup = ({
   tasks,
 }) => {
   const handleAddCard = () => {
-    // Add logic to save the new card or perform necessary actions
+    // You can perform additional logic here or call the onAddCard callback
+    onAddCard({
+      title: newCardTitle,
+      summary: newCardSummary,
+      description: newCardDescription,
+      assignee: newCardAssignee,
+    });
 
     // Close the popup after adding the card
     onClose();
@@ -52,6 +58,7 @@ const CreateCardPopup = ({
               className="form-control"
               value={newCardTitle}
               onChange={(e) => onChangeTitle(e.target.value)}
+              aria-label="Card Title"
             />
 
             <label htmlFor="newCardSummary" className="form-label">
@@ -63,6 +70,7 @@ const CreateCardPopup = ({
               className="form-control"
               value={newCardSummary}
               onChange={(e) => onChangeSummary(e.target.value)}
+              aria-label="Card Summary"
             />
 
             <label htmlFor="newCardDescription" className="form-label">
@@ -73,6 +81,7 @@ const CreateCardPopup = ({
               className="form-control"
               value={newCardDescription}
               onChange={(e) => onChangeDescription(e.target.value)}
+              aria-label="Card Description"
             ></textarea>
 
             <label htmlFor="newCardAssignee" className="form-label">
@@ -84,6 +93,7 @@ const CreateCardPopup = ({
               className="form-control"
               value={newCardAssignee}
               onChange={(e) => onChangeAssignee(e.target.value)}
+              aria-label="Assignee"
             />
 
             <button
