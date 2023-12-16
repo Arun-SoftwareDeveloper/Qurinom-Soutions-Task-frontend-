@@ -1,6 +1,6 @@
 // Dashboard.js
 import React, { useState, useEffect } from "react";
-import "../Styles/Dashboard.css";
+import "../Styles/DashBoard.css";
 import Card from "../Components/Card";
 import CreateCardPopup from "../Components/CreateCardPopup";
 import { FaSignOutAlt } from "react-icons/fa";
