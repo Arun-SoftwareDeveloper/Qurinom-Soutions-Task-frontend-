@@ -90,6 +90,7 @@ function RegisterForm() {
       <div className="row">
         <div className="col-md-12">
           <form className="form-group" onSubmit={handleRegisterForm}>
+            <h2>Create Account</h2>
             <label htmlFor="email">Email:</label>
             <input
               type="text"
