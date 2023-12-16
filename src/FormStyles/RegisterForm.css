@@ -1,0 +1,61 @@
+/* RegisterForm.css */
+.regsiterForm-contianer {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Add fadeInUp animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+.btn-primary {
+  background-color: dodgerblue;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out; /* Add transition effect */
+}
+
+.btn-primary:hover {
+  background-color: #007bff;
+}
+
+p {
+  margin-top: 16px;
+}
+
+/* You can add more styles based on your requirements */

@@ -1,0 +1,30 @@
+/* Demo.css */
+
+.demo-container {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Add some margin to the top of the container for spacing */
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+/* Optional: Add some padding to the container */
+.container {
+  padding: 15px;
+}
