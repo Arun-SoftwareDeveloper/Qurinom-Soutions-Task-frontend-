@@ -141,7 +141,7 @@ const Dashboard = ({ user, onLogout }) => {
 
         <div className="add-card-form">
           <button className="btn btn-primary mt-2" onClick={handleCreatePopup}>
-            Create
+            <i class="fa-solid fa-plus"></i> Create
           </button>
 
           <CreateCardPopup

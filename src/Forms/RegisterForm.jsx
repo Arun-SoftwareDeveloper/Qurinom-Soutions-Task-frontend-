@@ -161,7 +161,7 @@ function RegisterForm() {
             </button>
             <p>
               If you already have an Account{" "}
-              <Link to="/login">
+              <Link to="/login" style={{ textDecoration: "none" }}>
                 <span style={{ color: "dodgerblue" }}>Login</span>
               </Link>
             </p>

@@ -72,12 +72,12 @@ const LoginForm = ({ onLogin }) => {
       </button>
       <p>
         Don't have an account?{" "}
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: "none" }}>
           {" "}
           <span style={{ color: "dodgerblue" }}>Register</span>
         </Link>
       </p>
-      <Link to="/forgotPassword">
+      <Link to="/forgotPassword" style={{ textDecoration: "none" }}>
         <p>Forgot Password?</p>
       </Link>
       <ToastContainer />

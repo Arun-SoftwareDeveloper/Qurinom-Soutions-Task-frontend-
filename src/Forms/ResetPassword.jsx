@@ -118,7 +118,10 @@ const ResetPassword = () => {
           Reset Password
         </button>
         <p>
-          Remember your password? <Link to="/login">Login</Link>
+          Remember your password?{" "}
+          <Link to="/login" style={{ textDecoration: "none" }}>
+            Login
+          </Link>
         </p>
 
         {/* Toast Container */}
