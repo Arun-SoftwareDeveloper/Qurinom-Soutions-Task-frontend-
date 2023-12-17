@@ -72,7 +72,7 @@ const LoginForm = ({ onLogin }) => {
       </button>
       <p>
         Don't have an account?{" "}
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/register" style={{ textDecoration: "none" }}>
           {" "}
           <span style={{ color: "dodgerblue" }}>Register</span>
         </Link>

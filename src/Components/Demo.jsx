@@ -26,9 +26,9 @@ const Demo = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="/register" className="nav-link btn">
+              <Link to="/register" className="nav-link btn">
                 Create Account
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
