@@ -4,7 +4,6 @@ import Card from "../Components/Card";
 import CreateCardPopup from "../Components/CreateCardPopup";
 import { FaSignOutAlt } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = ({ user, onLogout }) => {
   const [cards, setCards] = useState([]);
