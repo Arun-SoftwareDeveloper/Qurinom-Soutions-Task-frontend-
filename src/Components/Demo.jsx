@@ -1,7 +1,4 @@
-// Demo.js
-
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Demo.css";
 
 const Demo = () => {
