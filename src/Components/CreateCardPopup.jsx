@@ -1,5 +1,3 @@
-// CreateCardPopup.js
-
 import React from "react";
 import "../Styles/CreateCardPopup.css";
 
@@ -18,7 +16,7 @@ const CreateCardPopup = ({
   tasks,
 }) => {
   const handleAddCard = () => {
-    // You can perform additional logic here or call the onAddCard callback
+    //add to card logics are here
     onAddCard({
       title: newCardTitle,
       summary: newCardSummary,
@@ -34,7 +32,7 @@ const CreateCardPopup = ({
     showPopup && (
       <div className="popup">
         <div className="popup-inner">
-          <h2>Create New Card</h2>
+          <h2>Create New Task</h2>
 
           {/* Display existing tasks above the form */}
           {tasks && tasks.length > 0 && (
@@ -50,7 +48,7 @@ const CreateCardPopup = ({
 
           <form>
             <label htmlFor="newCardTitle" className="form-label">
-              Card Title:
+              Task Title:
             </label>
             <input
               type="text"
@@ -62,7 +60,7 @@ const CreateCardPopup = ({
             />
 
             <label htmlFor="newCardSummary" className="form-label">
-              Card Summary:
+              Task Summary:
             </label>
             <input
               type="text"
@@ -74,7 +72,7 @@ const CreateCardPopup = ({
             />
 
             <label htmlFor="newCardDescription" className="form-label">
-              Card Description:
+              Task Description:
             </label>
             <textarea
               id="newCardDescription"
@@ -106,7 +104,7 @@ const CreateCardPopup = ({
                 !newCardAssignee
               }
             >
-              Add Card
+              Add Task
             </button>
             <button className="btn btn-secondary mt-2" onClick={onClose}>
               Cancel

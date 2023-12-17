@@ -61,10 +61,8 @@ const ResetPassword = () => {
         password,
       });
 
-      // Handle success, e.g., display success message
       toast.success("Password reset successful", { position: "top-right" });
     } catch (error) {
-      // Handle error, e.g., display error message
       toast.error("Error resetting password. Please try again.", {
         position: "top-right",
       });

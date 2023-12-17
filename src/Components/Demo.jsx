@@ -1,44 +1,105 @@
+// Demo.js
+
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/Demo.css";
 
 const Demo = () => {
-  const [projectDescription, setProjectDescription] = useState("");
-
-  const handleDescriptionChange = (e) => {
-    setProjectDescription(e.target.value);
-  };
+  const [username, setUsername] = useState("User");
 
   return (
-    <div className="app">
-      <header className="header">
-        <h1>Demo Dashboard</h1>
-      </header>
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <a href="#home" className="nav-link btn">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="#about" className="nav-link btn">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/login" className="nav-link btn">
+                Login
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/register" className="nav-link btn">
+                Create Account
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-      <main className="main">
-        <section className="project-section">
-          <h2>Project Description</h2>
-          <p>
-            {" "}
-            summary begins with an introductory sentence that states the text's
-            title, author and main point of the text as you see it. A summary is
-            written in your own words. A summary contains only the ideas of the
-            original text. Do not insert any of your own opinions,
-            interpretations, deductions or comments into a summary.
-          </p>
-        </section>
+      <div id="home" className="container mt-4">
+        <h2>Welcome, {username}!</h2>
+        <p>
+          Welcome to our project! We're excited to have you on board. Feel free
+          to explore and make the most of our dashboard. If you have any
+          questions or need assistance, don't hesitate to reach out. Happy
+          navigating!
+        </p>
+      </div>
 
-        <section className="about-section">
-          <h2>About the Project</h2>
-          <p>This is a demo dashboard created using React.</p>
-        </section>
+      <div id="about" className="container mt-4">
+        <h2>About Project</h2>
+        <p>
+          Explore a dynamic project management experience with our demo website.
+          Users can seamlessly log in, create accounts, and navigate a
+          feature-rich dashboard reminiscent of Jira sprints. The drag-and-drop
+          task board empowers users to effortlessly add, edit, and delete cards.
+          Enjoy the flexibility of adding information in various formats,
+          including text, PDF, and more. Visit our live demo on Netlify and
+          access the complete codebase on GitHub for an immersive hands-on
+          experience.
+        </p>
+      </div>
 
-        <section className="buttons-section">
-          <button className="common-button">How</button>
-          <button className="common-button">About</button>
-          <button className="common-button">Login</button>
-          <button className="common-button">Create Account</button>
-        </section>
-      </main>
+      <div className="links container mt-4">
+        <span>Frontend Source Code - </span>
+        <a
+          href="https://github.com/Arun-SoftwareDeveloper/Qurinom-Soutions-Task-frontend-"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click Here
+        </a>
+        <div>
+          <span>Backend Source Code - </span>
+          <a
+            href="https://github.com/Arun-SoftwareDeveloper/Qurinom-Solutions-Task-backend-"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click Here
+          </a>
+        </div>
+        <div>
+          <span>Frontend Deploy Link - </span>
+          <a
+            href="https://sparkling-duckanoo-700a1b.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click Here
+          </a>
+        </div>
+        <div>
+          <span>Backend Deploy Link - </span>
+          <a
+            href="https://qurinom-solutions-backend.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click Here
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

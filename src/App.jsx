@@ -45,7 +45,9 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<RegisterForm />} />
+          {" "}
+          <Route path="/" element={<Demo />} />
+          <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
           <Route path="/forgotPassword" element={<ForgotPasswordForm />} />
           <Route path="/resetPassword" element={<ResetPasswordForm />} />

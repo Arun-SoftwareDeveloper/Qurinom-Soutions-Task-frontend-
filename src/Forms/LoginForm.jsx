@@ -77,8 +77,11 @@ const LoginForm = ({ onLogin }) => {
           <span style={{ color: "dodgerblue" }}>Register</span>
         </Link>
       </p>
-      <Link to="/forgotPassword" style={{ textDecoration: "none" }}>
-        <p>Forgot Password?</p>
+      <Link
+        to="/forgotPassword"
+        style={{ textDecoration: "none", color: "dodgerblue" }}
+      >
+        <p style={{ color: "dodgerblue" }}>Forgot Password?</p>
       </Link>
       <ToastContainer />
     </div>

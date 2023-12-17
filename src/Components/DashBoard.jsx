@@ -1,10 +1,10 @@
-// Dashboard.js
 import React, { useState, useEffect } from "react";
 import "../Styles/DashBoard.css";
 import Card from "../Components/Card";
 import CreateCardPopup from "../Components/CreateCardPopup";
 import { FaSignOutAlt } from "react-icons/fa";
-// import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import { toast, ToastContainer } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = ({ user, onLogout }) => {
   const [cards, setCards] = useState([]);
@@ -64,6 +64,7 @@ const Dashboard = ({ user, onLogout }) => {
     setNewCardDescription("");
     setNewCardAssignee("Arun Ramasamy");
     setShowCreateForm(false);
+    toast.success("Task created successfully!");
   };
 
   const handleEditCard = (cardId, updatedData) => {
@@ -165,7 +166,7 @@ const Dashboard = ({ user, onLogout }) => {
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => handleDrop(e, "TO_DO")}
           >
-            <h3>To Do</h3>
+            <h3 className="task-heading">To Do</h3>
             {todoCards.map((card) => (
               <Card
                 key={card._id}
@@ -182,7 +183,7 @@ const Dashboard = ({ user, onLogout }) => {
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => handleDrop(e, "IN_PROGRESS")}
           >
-            <h3>In Progress</h3>
+            <h3 className="task-heading">In Progress</h3>
             {inProgressCards.map((card) => (
               <Card
                 key={card._id}
@@ -199,7 +200,7 @@ const Dashboard = ({ user, onLogout }) => {
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => handleDrop(e, "DONE")}
           >
-            <h3>Done</h3>
+            <h3 className="task-heading">Done</h3>
             {doneCards.map((card) => (
               <Card
                 key={card._id}
@@ -210,6 +211,7 @@ const Dashboard = ({ user, onLogout }) => {
               />
             ))}
           </div>
+          <ToastContainer />
         </div>
       </div>
     </div>

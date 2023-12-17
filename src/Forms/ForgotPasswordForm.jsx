@@ -76,7 +76,6 @@ function ForgotPasswordForm() {
             <button className="btn btn-primary" type="submit">
               Submit
             </button>
-            <p>Check your mail</p>
           </form>
         </div>
       </div>
