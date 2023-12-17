@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/Demo.css";
 
 const Demo = () => {
@@ -20,9 +21,9 @@ const Demo = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/login" className="nav-link btn">
+              <Link to="/login" className="nav-link btn">
                 Login
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="/register" className="nav-link btn">
